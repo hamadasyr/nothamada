@@ -14,7 +14,8 @@ from urllib.parse import urlencode, parse_qs
 
 from aiohttp import ClientSession, ClientTimeout
 from aiocfscrape import CloudflareScraper
-from aiohttp_socks import ChainProxyConnector, ProxyConnector
+from aiohttp_socks import Chain
+Connector, ProxyConnector
 from certifi import where
 from h2.connection import H2Connection
 from yarl import URL
@@ -1036,7 +1037,7 @@ async def main():
     if not ua_file.exists():
         exit("Useragent file or proxy file doesn't exists")
 
-    with open("proxy.txt") as f:
+    with open("/home/nayasyapp/nothamadai/proxy.txt") as f:
         MagicData.RAW_PROXIES = [x.strip() for x in f.readlines() if "://" in x]
     
     MagicData.PROXIES = [Proxy.from_url(x.strip()) for x in MagicData.RAW_PROXIES if "://" in x]
