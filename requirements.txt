@@ -1,0 +1,6 @@
+aiocfscrape~=1.0.0
+yarl~=1.7.2
+h2~=4.1.0
+aiohttp_socks~=0.7.1
+certifi~=2022.6.15
+aiohttp~=3.8.1
